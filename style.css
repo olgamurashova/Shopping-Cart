@@ -1,0 +1,28 @@
+/*Google Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Permanent+Marker&family=Public+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: "Noto Sans";
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: orangered;
+    --text-color: rgb(37, 36, 36);
+    --back-color: #fff;
+}
+
+img {
+    width: 100%;
+
+}
+
+body {
+    color: var(--text-color);
+}
