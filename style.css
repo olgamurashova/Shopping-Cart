@@ -26,3 +26,40 @@ img {
 body {
     color: var(--text-color);
 }
+
+/*HEADER*/
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--back-color);
+    position: fixed;
+    box-shadow: 0 1px 4px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--main-color);
+
+
+}
+
+#cart-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
