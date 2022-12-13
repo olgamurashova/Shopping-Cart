@@ -63,3 +63,17 @@ body {
     font-size: 1.8rem;
     cursor: pointer;
 }
+
+/*Shop Section*/
+
+section {
+    padding: 4rem 0 3rem;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/*CONTENT*/
