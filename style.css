@@ -92,6 +92,31 @@ body {
 
 }
 
+.cart-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-price {
+     font-weight: 500;
+}
+
+.cart-quantity {
+    
+}
+
 
 /*Shop Section*/
 
