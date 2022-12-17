@@ -24,3 +24,26 @@ if (document.readyState == "loading") {
         ready();
     }
 
+//Fucntion ready()
+
+function ready(){
+    //remove Items from cart
+    var removeCartButtons = document.getElementsByClassName('cart-remove');
+    console.log(removeCartButtons);
+    for (let i = 0; i < removeCartButtons.length; i++){
+        let button = removeCartButtons[i];
+        button.addEventListener("click", removeCartItem)
+    }
+
+}
+
+//Remove Items from Cart 
+
+function removeCartItem(e) {
+    let buttonClicked = e.target;
+    buttonClicked.parentElement.remove();
+}
+
+//Update Total
+
+
