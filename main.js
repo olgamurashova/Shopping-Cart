@@ -36,8 +36,8 @@ function ready(){
     }
 
     //Quantity changes 
-    var quantityInputs = document.getElementsByClassName('cart-quantity');
-    for (let i = 0; quantityInputs.length < 0; i++) {
+    var quantityInputs = document.getElementsByClassName("cart-quantity");
+    for (let i = 0; i < quantityInputs.length; i++) {
         var input = quantityInputs[i];
         input.addEventListener("change", quantityChanged);
     }
@@ -69,17 +69,17 @@ function quantityChanged(e) {
 //Update Total
 
  function updatetotal(){
-    var cartContent = document.getElementsByClassName('cart-content')[0];
-    var cartBoxes = document.getElementsByClassName('cart-box');
+    var cartContent = document.getElementsByClassName("cart-content")[0];
+    var cartBoxes = cartContent.getElementsByClassName("cart-box");
     total = 0;
-    for( let i = 0; i < cartBox.length; i++) {
+    for( let i = 0; i < cartBoxes.length; i++) {
         var cartBox = cartBoxes[i];
-        var priceEl = cartBox.getElementsByClassName('cart-price')[0];
-        var quantityEl = cartBox.getElementsByClassName('cart-quantity')[0];
+        var priceEl = cartBox.getElementsByClassName("cart-price")[0];
+        var quantityEl = cartBox.getElementsByClassName("cart-quantity")[0];
         var price = parseFloat(priceEl.innerText.replace("$", ""));
         var quantity = quantityEl.value;
         total = total + (price * quantity); 
     }
 
-    document.getElementsByName('total-price')[0].innerText = "$" + total;
+    document.getElementsByClassName("total-price")[0].innerText = "$" + total;
  }
