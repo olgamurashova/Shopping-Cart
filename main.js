@@ -42,8 +42,23 @@ function ready(){
 function removeCartItem(e) {
     let buttonClicked = e.target;
     buttonClicked.parentElement.remove();
+    updatetotal();
 }
 
 //Update Total
 
+ function updatetotal(){
+    var cartContent = document.getElementsByClassName('.cart-content')[0];
+    var cartBoxes = document.getElementsByClassName('.cart-box');
+    total = 0;
+    for( let i = 0; i < cartBox.length; i++) {
+        var cartBox = cartBoxes[i];
+        var priceEl = cartBox.getElementsByClassName('.cart-price')[0];
+        var quantityEl = cartBox.getElementsByClassName('.cart-quantity')[0];
+        var price = parseFloat(priceEl.innerText.replace("$", ""));
+        var quantity = quantityEl.value;
+        total = total + (price * quantity); 
+    }
 
+    document.getElementsByName('.total-price')[0].innerText = "$" + total;
+ }
