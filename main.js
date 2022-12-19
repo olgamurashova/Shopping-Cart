@@ -49,6 +49,9 @@ function ready(){
         button.addEventListener("click", addCartClicked);
     }
 
+    //Buy Button Work 
+
+
 }
 
 //Remove Items from Cart 
@@ -125,10 +128,10 @@ function quantityChanged(e) {
         }
     }
     let cartBoxContent = `
-    <img src="/Images/pexels-daniel-torobekov-4890259.jpg" alt="" class="cart-img">
+    <img src="${productImg}" alt="" class="cart-img">
     <div class="detail-box">
-        <div class="cart-product-title">White hoodie</div>
-        <div class="cart-price">$25</div>
+        <div class="cart-product-title">${title}</div>
+        <div class="cart-price">${price}</div>
         <input type="number" value="1" class="cart-quantity">
     </div>
 
@@ -147,6 +150,3 @@ cartShopBox.getElementsByClassName("cart-quantity")[0].addEventListener("change"
 
  }
 
-
-
- 
