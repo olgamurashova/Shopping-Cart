@@ -50,6 +50,20 @@ function ready(){
     }
 
     //Buy Button Work 
+    document.getElementsByClassName("btn-buy")[0].addEventListener("click", buyButtonClicked);
+
+
+}
+
+//buyButtonClicked
+
+function buyButtonClicked(){
+    alert("Your order has been placed");
+    var cartContent = document.getElementsByClassName("cart-content")[0];
+    while (cartContent.hasChildNodes()) {
+        cartContent.removeChild(cartContent.firstChild);
+    }
+    updatetotal();
 
 
 }
@@ -89,14 +103,16 @@ function quantityChanged(e) {
         var price = parseFloat(priceEl.innerText.replace("$", ""));
         var quantity = quantityEl.value;
         total = total + (price * quantity); 
+    }
 
         //If price contains some cents value
 
         total = Math.round(total * 100) / 100;
+        document.getElementsByClassName("total-price")[0].innerText = "$" + total;
     }
 
-    document.getElementsByClassName("total-price")[0].innerText = "$" + total;
- }
+   
+ 
 
 
  //Add to Cart 
