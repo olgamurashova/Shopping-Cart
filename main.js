@@ -119,8 +119,34 @@ function quantityChanged(e) {
     var cartItems = document.getElementsByClassName("cart-content")[0];
     var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
     for (let i = 0; i < cartItemsNames.length; i++) {
-         alert("You have already added this item to the cart")
+        if(cartItemsNames[i].innerText == title) {
+         alert("You have already added this item to the cart");
+         return;
+        }
     }
+    let cartBoxContent = `
+    <img src="/Images/pexels-daniel-torobekov-4890259.jpg" alt="" class="cart-img">
+    <div class="detail-box">
+        <div class="cart-product-title">White hoodie</div>
+        <div class="cart-price">$25</div>
+        <input type="number" value="1" class="cart-quantity">
+    </div>
 
+    <!--Remove Cart-->
+    <i class='bx bx-trash-alt cart-remove' ></i>
+
+`;
+
+cartShopBox.innerHTML = cartBoxContent;
+
+cartItems.append(cartShopBox);
+
+cartShopBox.getElementsByClassName("cart-remove")[0].addEventListener("click", removeCartItem);
+
+cartShopBox.getElementsByClassName("cart-quantity")[0].addEventListener("change", quantityChanged);
 
  }
+
+
+
+ 
