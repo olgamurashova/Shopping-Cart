@@ -112,6 +112,15 @@ function quantityChanged(e) {
 
  //addProductToCart
 
- function addProductToCart(){
+ function addProductToCart(title, price, productImg){
+    var cartShopBox = document.createElement("div");
+    cartShopBox.classList.add("cart-box");
+
+    var cartItems = document.getElementsByClassName("cart-content")[0];
+    var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
+    for (let i = 0; i < cartItemsNames.length; i++) {
+         alert("You have already added this item to the cart")
+    }
+
 
  }
